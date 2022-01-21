@@ -200,7 +200,7 @@ export type BF<
         blocks: $Blocks;
         outputType: $OutputType;
       }>
-    : T extends `${string}${string}${infer $Rest}` ? BF<{
+    : T extends `${string}${infer $Rest}` ? BF<{
       program: $Rest;
       input: $Input;
       memory: $Memory;
