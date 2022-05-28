@@ -42,12 +42,14 @@ type Locked<L extends number, T, $Draft extends T[] = []> =
     : $Draft["length"] extends 999 ? { length: L } & T[]
     : Locked<L, T, [...$Draft, T]>;
 
-type MapCharCodesToASCII<T extends number[]> = T extends [infer $F, ...infer $R]
-  ? $F extends keyof ASCIICodeMap ? `${ASCIICodeMap[$F]}${MapCharCodesToASCII<
-    $R extends number[] ? $R : never
-  >}`
-  : `\0${MapCharCodesToASCII<$R extends number[] ? $R : never>}`
-  : "";
+type MapCharCodesToASCII<T extends number[], $Draft extends string = ""> =
+  T extends [infer $F, ...infer $R]
+    ? $F extends keyof ASCIICodeMap ? MapCharCodesToASCII<
+      $R extends number[] ? $R : never,
+      `${$Draft}${ASCIICodeMap[$F]}`
+    >
+    : MapCharCodesToASCII<$R extends number[] ? $R : never, `${$Draft}\0`>
+    : $Draft;
 
 type BFOutputType = "buffer" | "ascii";
 

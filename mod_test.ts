@@ -47,4 +47,3 @@ assertEqualTypes<
   }>,
   "Hello World!\n"
 >();
-
