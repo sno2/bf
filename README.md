@@ -1,4 +1,4 @@
-# Brainf\*ck Interpreter in the TypeScript type system
+# Brainheck Interpreter in the TypeScript type system
 
 _Just another thing that no one asked for._
 
@@ -22,7 +22,7 @@ This basic recursive approach combined with [TypeScript's inferring within condi
 
 ## Example
 
-Let's run a hello world Brainf\*ck program using our interpreter.
+Let's run a hello world Brainheck program using our interpreter.
 
 ```ts
 // import type { BF } from "./mod.ts";
@@ -53,11 +53,11 @@ memory size is 256 slots. Here are the options you should know about:
 
 - `program`
 
-This is your Brainf\*ck program.
+This is your Brainheck program.
 
 - `input`
 
-The input that the Brainf\*ck program can ready byte-by-byte via the `,`
+The input that the Brainheck program can ready byte-by-byte via the `,`
 command. By default this is just an empty string.
 
 - `memory`
