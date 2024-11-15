@@ -2,7 +2,7 @@
 
 ## Why?
 
-I love messing with the TypeScript type system. Somehow building crazy things with technologies that were definitely not supposed to be built with is exciting for me. And, building a Brainf\*ck interpreter in the TypeScript type system is basically doing exactly that but twice at the same time.
+I love messing with the TypeScript type system and playing around with this [hidden Turing-complete language](https://github.com/microsoft/TypeScript/issues/14833#issuecomment-1018872710) within a Turing-complete language.
 
 ## How?
 
